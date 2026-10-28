@@ -1,0 +1,49 @@
+{
+	"geode": "5.11.2",
+	"gd": {
+		"win": "2.2081",
+		"android": "2.2081",
+		"mac": "2.2081",
+		"ios": "2.2081"
+	},
+	"id": "april.death-pause",
+	"name": "Death Pause",
+	"version": "v1.0.0",
+	"developer": "April",
+	"description": "Opens the real pause menu when you die.",
+	"tags": ["gameplay", "utility"],
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled",
+			"default": true
+		},
+		"normal-mode": {
+			"type": "bool",
+			"name": "Pause in normal mode",
+			"default": true,
+			"enable-if": "enabled"
+		},
+		"practice-mode": {
+			"type": "bool",
+			"name": "Pause in practice mode",
+			"default": true,
+			"enable-if": "enabled"
+		},
+		"delay": {
+			"type": "float",
+			"name": "Delay (seconds)",
+			"description": "How long after death before the pause menu opens. 0 = next frame. Use a small value if you want to see the death effect first.",
+			"default": 0.0,
+			"min": 0.0,
+			"max": 2.0,
+			"enable-if": "enabled",
+			"control": {
+				"slider": true,
+				"slider-step": 0.05,
+				"input": true,
+				"arrows": false
+			}
+		}
+	}
+}
